@@ -22,10 +22,14 @@ $(document).ready(function () {
         "info": true,
         "autoWidth": false,
         "columns": [
-            { "id": "name", "width": "10%", "name": "id" },
             { "data": "name", "width": "30%", "name": "name" },
             { "data": "description", "width": "40%", "name": "description" },
             { "data": "price", "width": "20%", "name": "price" },
+            {
+                "data": "id", "width": "5%", "render": function (data, type, row) {
+                    return '<a href="' + row['id'] + '" class="btn btn-default btn-xs"><span tkey="alterar">alterar</span></a>';
+                }
+            }
         ]
     });
 });

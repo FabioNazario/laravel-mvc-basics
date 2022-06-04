@@ -110,10 +110,6 @@ $(document).ready(function () {
     "info": true,
     "autoWidth": false,
     "columns": [{
-      "id": "name",
-      "width": "10%",
-      "name": "id"
-    }, {
       "data": "name",
       "width": "30%",
       "name": "name"
@@ -125,6 +121,12 @@ $(document).ready(function () {
       "data": "price",
       "width": "20%",
       "name": "price"
+    }, {
+      "data": "id",
+      "width": "5%",
+      "render": function render(data, type, row) {
+        return '<a href="' + row['id'] + '" class="btn btn-default btn-xs"><span tkey="alterar">alterar</span></a>';
+      }
     }]
   });
 });
@@ -168,7 +170,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/fnazario/projects/personal/laravel-mvc-basics/resources/js/product.js */"./resources/js/product.js");
+module.exports = __webpack_require__(/*! /home/fnazario/fullcycle/laravel/laravel-mvc-basics/resources/js/product.js */"./resources/js/product.js");
 
 
 /***/ })

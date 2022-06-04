@@ -8,6 +8,12 @@ use Yajra\DataTables\Facades\DataTables;
 
 class ProductController extends Controller
 {
+
+    public function __construct(Product $model)
+    {
+        $this->model = $model;
+    }
+
     public function index()
     {
 
@@ -22,7 +28,9 @@ class ProductController extends Controller
 
     public function datatable()
     {
-        dd(DataTables::class);
-        return Product::all()->toArray();
+        $retorno = DataTables::collection($this->model->get())->make(true);
+
+        return $retorno;
+
     }
 }
