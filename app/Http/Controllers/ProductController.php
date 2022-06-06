@@ -31,6 +31,5 @@ class ProductController extends Controller
         $retorno = DataTables::collection($this->model->get())->make(true);
 
         return $retorno;
-
     }
 }
