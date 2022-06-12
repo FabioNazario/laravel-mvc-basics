@@ -7,7 +7,11 @@ $(document).ready(function () {
             "<'row'<'col-sm-6'f><'col-sm-6'l>>" +
             "<'row'<'col-sm-12'tr>>" +
             "<'row'<'col-sm-5'i><'col-sm-7'p>>",
-        "buttons": [
+        buttons: [
+            {
+                extend: 'excelHtml5',
+                className: 'dt-button'
+            }
         ],
         "ajax": {
             url: datatable_path,
@@ -20,7 +24,7 @@ $(document).ready(function () {
         "searching": true,
         "ordering": true,
         "info": true,
-        "autoWidth": false,
+        "autoWidth": false, 
         "columns": [
             { "data": "name", "width": "30%", "name": "name" },
             { "data": "description", "width": "40%", "name": "description" },

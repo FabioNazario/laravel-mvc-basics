@@ -96,7 +96,10 @@
 $(document).ready(function () {
   listaPromocoes = $('#product-table').DataTable({
     dom: "<'row'<'col-sm-6'><'col-sm-6'B>>" + "<'row'<'col-sm-6'f><'col-sm-6'l>>" + "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-5'i><'col-sm-7'p>>",
-    "buttons": [],
+    buttons: [{
+      extend: 'excelHtml5',
+      className: 'dt-button'
+    }],
     "ajax": {
       url: datatable_path,
       data: function data(d) {}

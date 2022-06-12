@@ -12,7 +12,6 @@
         <body>
             <div class="content">
                 @include('products.datatable');
-                {{ $products }}
             </div>
         </body>
 
